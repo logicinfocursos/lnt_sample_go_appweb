@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Filmes</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <h1>Filmes (em go)</h1>
+    <div class="cards-container">
+        {{range .}}
+        <div class="card">
+            <img src="{{.PosterURL}}" alt="{{.Name}}" class="poster">
+            <div class="card-content">
+                <h2>{{.Name}}</h2>
+                <p class="overview">{{.Overview}}</p>
+                <p class="genres"><strong>Gêneros:</strong> {{.Genres}}</p>
+            </div>
+        </div>
+        {{end}}
+    </div>
+</body>
+</html>
